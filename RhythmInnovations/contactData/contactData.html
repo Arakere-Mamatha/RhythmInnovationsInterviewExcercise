@@ -1,0 +1,18 @@
+<!-- contactList.html -->
+<template>
+    <lightning-card title="Contacts with Last Name Starting with Vowels">
+        <div class="slds-m-around_medium">
+            <template if:true={contacts}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={contacts}
+                    columns={columns}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+            <template if:false={contacts}>
+                No contacts found.
+            </template>
+        </div>
+    </lightning-card>
+</template>
